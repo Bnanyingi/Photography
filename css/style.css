@@ -18,13 +18,13 @@ body, html {
     box-shadow: 0px 50px 100px #262626;
 }
 img {
-    width: 650px;
-    height: 400px;
+    width: 99%;
+    height: 99%;
     transition: 1s;
 }   
 .img {
-    width: 650px;
-    height: 400px;
+    width: 99%;
+    height: 99%;
     position: absolute;
     z-index: 0;
     transition: 1s;
