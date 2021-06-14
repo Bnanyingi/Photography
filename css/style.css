@@ -14,7 +14,7 @@ body, html {
     position:fixed;
     height:100vh;
     width:40%;
-    background-color: #a8a4a4;
+    background-color: #fff;
     right:0;
     top: -1000px;
     z-index:2000;
@@ -54,6 +54,7 @@ body, html {
     transform: rotate(45deg);
     color: rgb(255,128,0);
     cursor:pointer;
+    background: none;
 }
 
 
@@ -69,6 +70,7 @@ body, html {
     right:40px;
     top:70px;
     cursor:pointer;
+    background: none;
 }
 
 @media screen and (max-width:1000px){
@@ -186,11 +188,7 @@ body, html {
         width:40px;
     }
 }
-.section .close{
-    background-color: #a8a4a4;
-     
 
-}
 
 /* Topnav*/
 body{

@@ -1,0 +1,67 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #171717;
+}
+:root {
+    --secondary: linear-gradient(to top, #8743ff, #4136f1);
+    --body: #eaf2ff;
+    --card: #fff;
+    --icons: #4136f1;
+    --bar: linear-gradient(to left, #f34c18, #f91100);
+}
+body {
+    background: var(--body);
+    transition: background 0.3s;
+}
+body.dark {
+    --body: #171717;
+    --icons: #fff;
+    --card: #0d0d0d;
+    --bar: var(--secondary);
+}
+.theme-toggle {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 40px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background: var(--secondary);
+    transition: background 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+}
+.card {
+    height: 91px;
+    width: 375px;
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 48px 36px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card a, .card a:visited, .card a:link {
+    color: var(--icons);
+    z-index: 3;
+    padding: 10px 30px;
+}
+.card span {
+    font-size: 26px;
+}
+.card__bar {
+    position: absolute;
+    background: var(--bar);
+    border-radius: 6px;
+    transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
