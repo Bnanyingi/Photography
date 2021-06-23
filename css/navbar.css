@@ -1,67 +1,173 @@
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.section{
+    position:fixed;
+    height:100vh;
+    width:40%;
+    background-color: #fff;
+    right:0;
+    top: -1000px;
+    z-index:2000;
+    transition:2s smooth;
+    padding-top:50px;
+    text-align:center;
+    border-left:2px solid rgb(255,128,0);
 }
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    background-color: #171717;
+.section-item{
+    height: 50px;
+    font-weight: bolder;
+    border-bottom:2px solid rgb(255,128,0);
+    width:500px;
+    margin:auto;
+    padding-top:20px;
+    cursor:pointer;
+    color: rgb(0,102,0);
 }
-:root {
-    --secondary: linear-gradient(to top, #8743ff, #4136f1);
-    --body: #eaf2ff;
-    --card: #fff;
-    --icons: #4136f1;
-    --bar: linear-gradient(to left, #f34c18, #f91100);
+@media screen and (max-width:1200px){
+    .section{
+        width:100%;
+        z-index: 25000;
+        
+    }
 }
-body {
-    background: var(--body);
-    transition: background 0.3s;
+
+.close{
+    position:relative;
+    top:30px;
+    left:50px;
+    height:30px;
+    width:30px;
+    font-weight: bolder;
+    font-size: 50px;
+    transform: rotate(45deg);
+    color: rgb(255,128,0);
+    cursor:pointer;
+    background: none;
 }
-body.dark {
-    --body: #171717;
-    --icons: #fff;
-    --card: #0d0d0d;
-    --bar: var(--secondary);
+
+
+
+.staticBtn{
+    position:fixed;
+    z-index:2500;
+    right:40px;
+    top:70px;
+    cursor:pointer;
+    background: none;
 }
-.theme-toggle {
-    position: absolute;
-    top: 13px;
-    right: 10px;
+
+@media screen and (max-width:1000px){
+    .static-btn{
+        top: 150px;
+    }
+}     
+
+.more-btn{
+    width: 75px;
+    height:auto;
+    padding:10px;
+    background-color: rgb(255,255,255,0.4);
+    border-radius: 10px;
+}
+.move{
+    top:0;
+    z-index: 10000;
+}
+.line{
+    height:5px;
+    margin-bottom:5px;
+    border-radius:10px;
+}
+.line-1{
+    width: 70px;
+    height:7px;
+    background-color: rgb(19, 18, 18);
+     animation: grow 2s linear infinite;
+}
+.line-2{
+    width: 30px;
+    background-color: rgb(12, 12, 12) ;
+     animation: growtwo 2s linear infinite;
+}
+.line-4{
     width: 40px;
-    height: 60px;
-    border: none;
-    outline: none;
-    background: var(--secondary);
-    transition: background 0.3s;
-    border-radius: 50%;
-    cursor: pointer;
-    color: #fff;
+    background-color: rgb(22, 21, 22);
 }
-.card {
-    height: 91px;
-    width: 375px;
-    background: var(--card);
-    border-radius: 24px;
-    padding: 36px 48px 36px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.line-3{
+    width: 50px;
+    background-color: rgb(15, 15, 15) ;
 }
-.card a, .card a:visited, .card a:link {
-    color: var(--icons);
-    z-index: 3;
-    padding: 10px 30px;
+
+.more-btn:hover .line-1{
+    animation: grow 2s linear infinite;
+} 
+
+@keyframes grow {
+    0%{
+        width:70px;
+    }
+    25%{
+        width:40px;
+    }
+    50%{
+        width:60px;
+    }
+    100%{
+        width:70px;
+    }
 }
-.card span {
-    font-size: 26px;
+
+.more-btn:hover .line-2{
+    animation: growtwo 2s linear infinite;
 }
-.card__bar {
-    position: absolute;
-    background: var(--bar);
-    border-radius: 6px;
-    transition: all cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+@keyframes growtwo {
+    0%{
+        width:30px;
+    }
+    25%{
+        width:40px;
+    }
+    50%{
+        width:10px;
+    }
+    100%{
+        width:30px;
+    }
 }
+
+.more-btn:hover .line-3{
+    animation: growthree 2s linear infinite;
+}
+@keyframes growthree {
+    0%{
+        width:50px;
+    }
+    25%{
+        width:20px;
+    }
+    50%{
+        width:40px;
+    }
+    100%{
+        width:50px;
+    }
+}
+
+.more-btn:hover .line-4{
+    animation: growfour 2s linear infinite;
+}
+@keyframes growfour {
+    0%{
+        width:40px;
+    }
+    25%{
+        width:20px;
+    }
+    50%{
+        width:50px;
+    }
+    100%{
+        width:40px;
+    }
+}
+

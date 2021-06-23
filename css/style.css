@@ -33,16 +33,14 @@ body, html {
     cursor:pointer;
     color: rgb(0,102,0);
 }
-@media screen and (max-width:800px){
-    .section{
-        width:100%;
-    }
-}
 @media screen and (max-width:1200px){
     .section{
-        width:80%;
+        width:100%;
+        z-index: 25000;
+        
     }
 }
+
 .close{
     position:relative;
     top:30px;
