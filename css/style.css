@@ -25,6 +25,7 @@ body, html {
 }
 .section-item{
     height: 50px;
+    font-family: 'Nunito', sans-serif;
     font-weight: bolder;
     border-bottom:2px solid rgb(255,128,0);
     width:500px;
